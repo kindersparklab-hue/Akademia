@@ -1,4 +1,27 @@
 /* Custom Glassmorphism and Styling for The Akademia Institute */
+
+/* Fluid root sizing so the entire layout scales gracefully to screen size */
+html {
+    font-size: 15px;
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1536px) {
+    html {
+        font-size: 17.5px; /* Automatically scales elements up smoothly on large widescreen PCs */
+    }
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .glass-nav {
     background: rgba(11, 15, 25, 0.85);
     backdrop-filter: blur(16px);
