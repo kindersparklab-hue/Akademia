@@ -3,522 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Akademia Institute | Shaping Minds, Where Future Is You — Samnabad, Lahore</title>
     
-    <!-- Primary SEO Meta Tags -->
-    <title>The Akademia Institute | Best School, Short Courses & Karate in Samnabad Lahore</title>
-    <meta name="description" content="Enroll your child from Nursery to Grade 12 at The Akademia Institute in Samnabad, Lahore. Offering professional short courses, karate training, and 100% free education for disabled students.">
-    <meta name="keywords" content="The Akademia Institute, school in Samnabad Lahore, nursery to grade 12 school Lahore, karate training Samnabad, short courses Lahore">
+    <!-- Meta SEO Tags -->
+    <meta name="description" content="Welcome to The Akademia Institute in Samnabad, Lahore. Offering top-tier education, professional short courses, martial arts training, and community welfare programs including 100% free education for disabled students.">
+    <meta name="keywords" content="The Akademia Institute, School in Samnabad Lahore, Education Institute Lahore, Free Education Disabled Students, Computer Courses Lahore, Martial Arts Lahore">
     <meta name="author" content="The Akademia Institute">
-
-    <!-- OpenGraph / Social Sharing Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="The Akademia Institute - Samnabad, Lahore">
-    <meta property="og:description" content="Shaping Minds, Where Future Is You. Nursery to Grade 12, Short Courses, Karate & 100% Free for Disabled Students.">
-    <meta property="og:url" content="https://kindersparklab-hue.github.io/Akademia/">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
-                        akademiaBlue: '#1e3a8a',
-                        akademiaGold: '#d97706',
-                        akademiaDark: '#0b0f19',
+                        akademiaGold: '#D4AF37',
+                        akademiaDark: '#0B0F19',
+                        akademiaCard: '#131C2E',
                     }
                 }
             }
         }
     </script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Three.js for 3D Background -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .glass-card {
+            background: rgba(19, 28, 46, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
+        }
+        /* Custom scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-<body class="bg-akademiaDark text-white font-['Plus_Jakarta_Sans'] overflow-x-hidden selection:bg-akademiaGold selection:text-white">
+<body class="bg-akademiaDark text-gray-100 font-sans antialiased selection:bg-akademiaGold selection:text-black">
 
-    <!-- 3D Background Canvas -->
-    <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+    <!-- Ambient Glow Background Effect -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] hero-glow pointer-events-none z-0"></div>
 
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 backdrop-blur-md transition-all duration-300" id="navbar">
-        <div class="max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12 h-24 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3.5 group">
-                <img src="The Akademia Institute/Logo.jpg" alt="The Akademia Institute Logo" class="w-12 h-12 rounded-full object-cover shadow-lg border border-akademiaGold/30">
-                <div>
-                    <span class="text-lg sm:text-2xl font-extrabold tracking-wide bg-gradient-to-r from-white via-blue-200 to-akademiaGold bg-clip-text text-transparent">THE AKADEMIA</span>
-                    <span class="block text-[10px] sm:text-xs font-semibold text-akademiaGold tracking-widest uppercase">INSTITUTE</span>
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-card border-b border-white/10">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="The Akademia Institute/Logo.jpg" alt="The Akademia Institute Logo" class="w-11 h-11 rounded-full object-cover border-2 border-akademiaGold/50 shadow-md group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-base tracking-wide text-white group-hover:text-akademiaGold transition-colors">The Akademia Institute</span>
+                    <span class="text-[10px] tracking-widest text-gray-400 uppercase font-semibold">Samnabad, Lahore</span>
                 </div>
             </a>
-            
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="#about" class="text-gray-300 hover:text-akademiaGold transition-colors">About</a>
-                <a href="#academics" class="text-gray-300 hover:text-akademiaGold transition-colors">Programs</a>
-                <a href="#courses" class="text-gray-300 hover:text-akademiaGold transition-colors">Short Courses</a>
-                <a href="#karate" class="text-gray-300 hover:text-akademiaGold transition-colors">Karate</a>
-                <a href="#testimonials" class="text-gray-300 hover:text-akademiaGold transition-colors">Testimonials</a>
-                <a href="#concessions" class="text-gray-300 hover:text-akademiaGold transition-colors">Concessions</a>
-                <a href="#why-us" class="text-gray-300 hover:text-akademiaGold transition-colors">Why Us</a>
-                <a href="#contact" class="text-gray-300 hover:text-akademiaGold transition-colors">Contact</a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-akademiaGold transition-colors">About Us</a>
+                <a href="#academics" class="hover:text-akademiaGold transition-colors">Programs</a>
+                <a href="#courses" class="hover:text-akademiaGold transition-colors">Short Courses & Karate</a>
+                <a href="#concessions" class="hover:text-akademiaGold transition-colors">Welfare & Concessions</a>
+                <a href="#contact" class="hover:text-akademiaGold transition-colors">Contact</a>
             </nav>
 
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="tel:03104241477" class="flex items-center space-x-2 text-xs sm:text-sm font-bold bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-full hover:bg-white/10 transition-colors">
-                    <i class="fa-solid fa-phone text-akademiaGold"></i>
-                    <span>0310-4241477</span>
-                </a>
-                <a href="#admission" class="bg-gradient-to-r from-blue-600 to-akademiaBlue text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-xl shadow-blue-600/30 hover:scale-105 transition-all">
-                    Apply Now
+            <!-- Action Buttons -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="https://wa.me/923104241477?text=Hello,%20I%20want%20to%20inquire%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="bg-akademiaGold hover:bg-yellow-500 text-black font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-akademiaGold/25 text-xs uppercase tracking-wider flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>WhatsApp Inquiry</span>
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="lg:hidden text-2xl text-gray-300 focus:outline-none p-2">
-                <i class="fa-solid fa-bars"></i>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden glass-nav border-b border-white/10 px-6 py-5 space-y-3">
-            <a href="#about" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">About</a>
-            <a href="#academics" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Programs</a>
-            <a href="#courses" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Short Courses</a>
-            <a href="#karate" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Karate</a>
-            <a href="#testimonials" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Testimonials</a>
-            <a href="#concessions" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Concessions</a>
-            <a href="#why-us" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Why Us</a>
-            <a href="#contact" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Contact</a>
-            <div class="pt-3 flex flex-col space-y-2.5 border-t border-white/10">
-                <a href="tel:03104241477" class="text-center bg-white/10 py-3 rounded-lg text-sm font-bold text-akademiaGold">
-                    <i class="fa-solid fa-phone mr-2"></i> 0310-4241477
-                </a>
-                <a href="#admission" class="text-center bg-blue-600 py-3 rounded-lg text-sm font-bold text-white">
-                    Apply Now
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-gray-300 hover:text-akademiaGold font-medium">About Us</a>
+            <a href="#academics" class="block text-gray-300 hover:text-akademiaGold font-medium">Programs</a>
+            <a href="#courses" class="block text-gray-300 hover:text-akademiaGold font-medium">Short Courses & Karate</a>
+            <a href="#concessions" class="block text-gray-300 hover:text-akademiaGold font-medium">Welfare & Concessions</a>
+            <a href="#contact" class="block text-gray-300 hover:text-akademiaGold font-medium">Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/923104241477?text=Hello,%20I%20want%20to%20inquire%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="w-full bg-akademiaGold text-black font-bold py-3 rounded-xl text-center block text-xs uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Inquiry
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 lg:px-12 z-10 overflow-hidden">
-        <div class="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
-            <div class="space-y-6 text-center lg:text-left lg:col-span-7">
-                <!-- Highlight Badges including Disabled Student focus -->
-                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-                    <div class="inline-flex items-center space-x-2 bg-akademiaGold/10 border border-akademiaGold/30 px-4 py-1.5 rounded-full text-akademiaGold text-xs font-bold tracking-wider uppercase animate-pulse">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>Admissions Open 2026-2027</span>
-                    </div>
-                    <div class="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/30 px-4 py-1.5 rounded-full text-green-400 text-xs font-bold tracking-wider uppercase">
-                        <i class="fa-solid fa-hands-holding-child"></i>
-                        <span>100% Free for Disabled Students</span>
-                    </div>
-                </div>
+    <section class="relative z-10 pt-20 pb-28 px-6 lg:px-12 text-center overflow-hidden">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full border border-akademiaGold/30 text-akademiaGold text-xs font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Admissions Open for New Academic Year</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none">
+                Shaping Minds, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-akademiaGold via-yellow-200 to-amber-500">Where Future Is You.</span>
+            </h1>
 
-                <h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1]">
-                    Shaping Minds, <br>
-                    <span class="bg-gradient-to-r from-blue-400 via-blue-200 to-akademiaGold bg-clip-text text-transparent">Where Future Is You</span>
-                </h1>
-                <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    Empowering the next generation from <strong class="text-white">Nursery to Grade 12</strong> with world-class academics, professional short courses, martial arts training, and elite mentorship in Samnabad, Lahore.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                    <a href="#admission" class="w-full sm:w-auto text-center bg-gradient-to-r from-akademiaBlue to-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-2xl shadow-blue-900/50 hover:scale-105 transition-all text-sm">
-                        Enroll Your Child Today
-                    </a>
-                    <a href="https://wa.me/923104241477?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="w-full sm:w-auto text-center bg-green-600/20 border border-green-500/30 text-green-400 font-bold px-7 py-4 rounded-xl hover:bg-green-600/30 transition-all flex items-center justify-center space-x-3 text-sm">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>WhatsApp Chat</span>
-                    </a>
-                </div>
+            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
+                Empowering the next generation in Samnabad, Lahore through premium academic foundations, professional computer skills, character building, and inclusive community welfare.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+                <a href="#admission" class="bg-akademiaGold hover:bg-yellow-500 text-black font-extrabold px-8 py-4 rounded-2xl transition-all shadow-xl shadow-akademiaGold/20 text-sm tracking-wide uppercase flex items-center space-x-3">
+                    <span>Apply For Admission</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#courses" class="glass-card hover:bg-white/10 text-white font-bold px-8 py-4 rounded-2xl border border-white/10 transition-all text-sm tracking-wide flex items-center space-x-3">
+                    <i class="fa-solid fa-book-open text-akademiaGold"></i>
+                    <span>Explore Programs</span>
+                </a>
             </div>
 
-            <!-- Dynamic Feature Graphic Card -->
-            <div class="relative flex justify-center lg:col-span-5">
-                <div class="absolute -inset-2 bg-gradient-to-r from-akademiaBlue to-akademiaGold rounded-3xl blur-2xl opacity-20"></div>
-                <div class="relative w-full max-w-md glass-card p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl space-y-6">
-                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-xl bg-akademiaGold/20 flex items-center justify-center text-akademiaGold font-bold">
-                                <i class="fa-solid fa-school"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-white">Samnabad Campus</h4>
-                                <span class="text-[11px] text-gray-400">Lahore, Pakistan</span>
-                            </div>
-                        </div>
-                        <span class="bg-akademiaGold/20 text-akademiaGold text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">Active</span>
-                    </div>
-                    
-                    <div class="space-y-3">
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-blue-600/30 flex items-center justify-center text-blue-400 text-lg shrink-0">
-                                <i class="fa-solid fa-computer"></i>
-                            </div>
-                            <div>
-                                <h5 class="text-sm font-bold">Modern Computer Lab</h5>
-                                <p class="text-xs text-gray-400">IT, Coding & Professional Short Courses</p>
-                            </div>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-red-600/30 flex items-center justify-center text-red-400 text-lg shrink-0">
-                                <i class="fa-solid fa-hand-fist"></i>
-                            </div>
-                            <div>
-                                <h5 class="text-sm font-bold">Karate Training Ground</h5>
-                                <p class="text-xs text-gray-400">Self-Defense, Agility & Fitness</p>
-                            </div>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-green-600/30 flex items-center justify-center text-green-400 text-lg shrink-0">
-                                <i class="fa-solid fa-hands-holding-child"></i>
-                            </div>
-                            <div>
-                                <h5 class="text-sm font-bold">Inclusive Care</h5>
-                                <p class="text-xs text-gray-400">100% Free for Disabled Students</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Key Metric Counters / Highlights -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 max-w-3xl mx-auto">
+                <div class="glass-card p-4 rounded-2xl border border-white/5 text-center">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-akademiaGold">100%</span>
+                    <span class="text-xs text-gray-400 mt-1 block">Free for Disabled Students</span>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-white/5 text-center">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-white">Expert</span>
+                    <span class="text-xs text-gray-400 mt-1 block">Qualified Faculty</span>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-white/5 text-center">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-akademiaGold">Skills</span>
+                    <span class="text-xs text-gray-400 mt-1 block">IT & Martial Arts</span>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-white/5 text-center">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-white">Lahore</span>
+                    <span class="text-xs text-gray-400 mt-1 block">Samnabad Campus</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 px-6 lg:px-12 relative z-10 bg-black/20 backdrop-blur-md border-y border-white/5">
-        <div class="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="space-y-6 lg:col-span-7">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">About Our Institute</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">Dedicated to Academic Brilliance & Moral Integrity</h2>
+    <!-- About Us Section -->
+    <section id="about" class="py-24 px-6 lg:px-12 relative z-10 bg-black/30 border-y border-white/5">
+        <div class="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">About The Akademia Institute</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">Committed to Excellence in Education & Character</h2>
                 <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
-                    Located in the heart of Samnabad, Lahore, <strong class="text-white">The Akademia Institute</strong> is committed to providing a transformative educational environment. Our pedagogy blends rigorous academic instruction with character building, technological literacy, and physical discipline.
+                    Located in the heart of Samnabad, Lahore, <strong class="text-white">The Akademia Institute</strong> stands as a beacon of academic rigor and moral discipline. We look beyond traditional rote learning, focusing deeply on analytical aptitude, technical capabilities, and personal integrity.
                 </p>
-                <div class="grid grid-cols-2 gap-4 pt-2">
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-akademiaGold">12+</h3>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-1">Grade Levels (Nursery - 12)</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="glass-card p-4 rounded-xl border border-white/5 flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-akademiaGold text-lg"></i>
+                        <span class="text-sm font-semibold text-gray-200">Concept-Based Learning</span>
                     </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-green-400">100%</h3>
-                        <p class="text-xs sm:text-sm text-gray-400 mt-1">Free for Disabled Students</p>
+                    <div class="glass-card p-4 rounded-xl border border-white/5 flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-akademiaGold text-lg"></i>
+                        <span class="text-sm font-semibold text-gray-200">Disciplined Environment</span>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-white/5 flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-akademiaGold text-lg"></i>
+                        <span class="text-sm font-semibold text-gray-200">Modern IT Training</span>
+                    </div>
+                    <div class="glass-card p-4 rounded-xl border border-white/5 flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-akademiaGold text-lg"></i>
+                        <span class="text-sm font-semibold text-gray-200">Parent Progress Tracking</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:col-span-5">
-                <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-6">
-                    <h3 class="text-xl font-bold">Core Pillars of Excellence</h3>
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-akademiaGold mt-1"></i>
-                            <span>Comprehensive curriculum from early years to Matric / high school.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-akademiaGold mt-1"></i>
-                            <span>Equipped computer labs and professional skill training modules.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-akademiaGold mt-1"></i>
-                            <span>Self-defense discipline through professional karate coaching.</span>
-                        </li>
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-akademiaGold mt-1"></i>
-                            <span>Financial support, sibling concessions, and special care.</span>
-                        </li>
-                    </ul>
+
+            <!-- Vision Card Box -->
+            <div class="glass-card p-8 sm:p-10 rounded-3xl border border-akademiaGold/20 space-y-6 relative overflow-hidden shadow-2xl">
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-akademiaGold/10 rounded-full blur-2xl"></div>
+                <div class="w-14 h-14 rounded-2xl bg-akademiaGold/20 text-akademiaGold flex items-center justify-center text-2xl font-bold">
+                    <i class="fa-solid fa-compass"></i>
                 </div>
+                <h3 class="text-2xl font-bold text-white">Our Core Mission</h3>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    To build a learning sanctuary where financial background never hinders scholastic success, and where young minds receive the holistic tools required to lead tomorrow's digital and intellectual landscape.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Programs (Nursery to Grade 12) -->
+    <!-- Academic Programs Section -->
     <section id="academics" class="py-24 px-6 lg:px-12 relative z-10">
         <div class="max-w-[90rem] mx-auto space-y-16">
-            <div class="text-center space-y-4 max-w-3xl mx-auto">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Academic Programs</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Structured Learning Stages</h2>
-                <p class="text-gray-400 text-base">Comprehensive schooling mapped from early childhood development all the way to higher secondary preparation.</p>
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Academic Excellence</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Comprehensive Educational Programs</h2>
+                <p class="text-gray-400 text-base sm:text-lg">Structured learning modules tailored for primary, secondary, and high-achieving students.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Early Years -->
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 hover:border-akademiaGold/50 transition-all duration-300 group">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-child-reaching"></i>
+                <!-- Program 1 -->
+                <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-6 hover:border-akademiaGold/50 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-akademiaGold/10 text-akademiaGold flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Early Years (Nursery to Prep)</h3>
-                    <p class="text-gray-400 text-sm sm:text-base mb-6 leading-relaxed">
-                        Play-based foundational learning, motor skills development, alphabet mastery, numeric initiation, and confidence building.
+                    <h3 class="text-xl font-bold text-white">Primary & Secondary Schooling</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Strong foundation building across core subjects with individualized attention, encouraging deep comprehension rather than rote memorization.
                     </p>
-                    <ul class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6">
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Interactive Visual & Audio Learning</li>
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Safe, Caring Environment</li>
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Socialization & Ethics</li>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Strong English & Urdu Language Skills</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Conceptual Mathematics & Science</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Homework Support & Daily Practice</span></li>
                     </ul>
                 </div>
 
-                <!-- Primary & Middle -->
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 hover:border-akademiaGold/50 transition-all duration-300 group">
-                    <div class="w-14 h-14 rounded-2xl bg-akademiaGold/20 text-akademiaGold flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-book-bookmark"></i>
+                <!-- Program 2 -->
+                <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-6 hover:border-akademiaGold/50 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-akademiaGold/10 text-akademiaGold flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Primary & Middle (Grade 1 to 8)</h3>
-                    <p class="text-gray-400 text-sm sm:text-base mb-6 leading-relaxed">
-                        Deepening core subject mastery including Mathematics, Science, English, Urdu, Computer Studies, and Islamic studies.
+                    <h3 class="text-xl font-bold text-white">Computer & IT Literacy</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Equipping students with vital 21st-century technological skills, from fundamental computer operations to modern digital productivity tools.
                     </p>
-                    <ul class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6">
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Strong Conceptual Foundation</li>
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Regular Quizzes & Assessments</li>
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Creative Writing & Logic</li>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Basic Computing & Office Tools</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Internet Navigation & Research Ethics</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Introductory Coding & Logic</span></li>
                     </ul>
                 </div>
 
-                <!-- High School -->
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 hover:border-akademiaGold/50 transition-all duration-300 group">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                <!-- Program 3 -->
+                <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-6 hover:border-akademiaGold/50 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-akademiaGold/10 text-akademiaGold flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-award"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">High School (Grade 9 to 12)</h3>
-                    <p class="text-gray-400 text-sm sm:text-base mb-6 leading-relaxed">
-                        Board examination preparation, science and arts groups, career counseling, and advanced analytical problem solving.
+                    <h3 class="text-xl font-bold text-white">Exam Preparation & Board Guidance</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Rigorous test preparation methodologies, model paper practice, and time-management strategy coaching for ultimate academic distinction.
                     </p>
-                    <ul class="space-y-3 text-sm text-gray-300 border-t border-white/10 pt-6">
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Expert Board Exam Coaching</li>
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Science Labs & Practical Work</li>
-                        <li><i class="fa-solid fa-check text-akademiaGold mr-2"></i> Professional Career Guidance</li>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Past Papers & Guess Paper Analysis</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Regular Mock Examinations</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-akademiaGold"></i><span>Exam Stress Management Support</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Short Courses & Karate Section -->
+    <!-- Short Courses & Karate Training Section -->
     <section id="courses" class="py-24 px-6 lg:px-12 relative z-10 bg-black/20 backdrop-blur-md border-y border-white/5">
         <div class="max-w-[90rem] mx-auto space-y-16">
-            <div class="text-center space-y-4 max-w-3xl mx-auto">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Skill Enhancement</span>
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Specialized Skill Training</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Short Courses & Martial Arts</h2>
-                <p class="text-gray-400 text-base">Equipping students with modern technical skills and physical fitness alongside their regular school studies.</p>
+                <p class="text-gray-400 text-base sm:text-lg">Building physical fitness, self-defense discipline, and high-demand vocational skills under one roof.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Short Courses -->
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 space-y-6">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-2xl shrink-0">
-                            <i class="fa-solid fa-laptop-code"></i>
+                <!-- Karate Card -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-hand-fist"></i>
                         </div>
-                        <div>
-                            <h3 class="text-xl sm:text-2xl font-bold">Professional Short Courses</h3>
-                            <p class="text-xs sm:text-sm text-gray-400">Future-ready digital skills for students & youth</p>
-                        </div>
+                        <h3 class="text-2xl font-bold text-white">Professional Karate Training</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Professional self-defense instruction designed to foster physical agility, mental resilience, discipline, and absolute confidence in students of all age groups.
+                        </p>
                     </div>
-                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        Enhance your capabilities with specialized short training programs designed for rapid skill acquisition:
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-semibold pt-2">
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-3">
-                            <i class="fa-solid fa-check text-akademiaGold"></i>
-                            <span>Computer Literacy & IT</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-3">
-                            <i class="fa-solid fa-check text-akademiaGold"></i>
-                            <span>Spoken English & Grammar</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-3">
-                            <i class="fa-solid fa-check text-akademiaGold"></i>
-                            <span>Graphic Design Basics</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 flex items-center space-x-3">
-                            <i class="fa-solid fa-check text-akademiaGold"></i>
-                            <span>Coding & Web Fundamentals</span>
-                        </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+                        <span><i class="fa-solid fa-shield text-akademiaGold mr-1"></i> Self-Defense & Fitness</span>
+                        <span class="text-akademiaGold font-bold">Enroll Now</span>
                     </div>
                 </div>
 
-                <!-- Karate Training -->
-                <div id="karate" class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 space-y-6">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center text-2xl shrink-0">
-                            <i class="fa-solid fa-hand-fist"></i>
+                <!-- Short Courses Card -->
+                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-akademiaGold/20 text-akademiaGold flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-certificate"></i>
                         </div>
-                        <div>
-                            <h3 class="text-xl sm:text-2xl font-bold">Professional Karate Training</h3>
-                            <p class="text-xs sm:text-sm text-gray-400">Self-defense, discipline, and physical fitness</p>
-                        </div>
+                        <h3 class="text-2xl font-bold text-white">Professional Short Courses</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Fast-track certificate courses in spoken English, computer applications, digital tools, and creative writing crafted for rapid personal and professional growth.
+                        </p>
                     </div>
-                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        Our specialized Karate program instills rigorous discipline, reflexes, self-confidence, and physical strength under certified trainers.
-                    </p>
-                    <ul class="space-y-3.5 text-sm text-gray-300 pt-2">
-                        <li class="flex items-center space-x-3">
-                            <i class="fa-solid fa-shield text-akademiaGold"></i>
-                            <span>Effective Self-Defense Techniques for Boys & Girls</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fa-solid fa-bolt text-akademiaGold"></i>
-                            <span>Agility, Stamina & Mental Focus Enhancement</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fa-solid fa-award text-akademiaGold"></i>
-                            <span>Belt Grading & Professional Coaching</span>
-                        </li>
-                    </ul>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+                        <span><i class="fa-solid fa-graduation-cap text-akademiaGold mr-1"></i> Certified Programs</span>
+                        <span class="text-akademiaGold font-bold">Explore</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-  <!-- Parent Testimonials Section -->
-    <section id="testimonials" class="py-24 px-6 lg:px-12 relative z-10 overflow-hidden">
+    <!-- Testimonials / Student Reviews Section -->
+    <section class="py-24 px-6 lg:px-12 relative z-10">
         <div class="max-w-[90rem] mx-auto space-y-16">
-            <div class="text-center space-y-4 max-w-3xl mx-auto">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Parent Trust & Social Proof</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">What Local Parents Say</h2>
-                <p class="text-gray-400 text-base">Real experiences shared by families from Samnabad and surrounding neighborhoods in Lahore.</p>
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Community Feedback</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">What Parents & Students Say</h2>
+                <p class="text-gray-400 text-base sm:text-lg">Real experiences from families who trust us with their educational journey.</p>
             </div>
 
-            <!-- Testimonials Slider Container -->
-            <div class="relative w-full">
-                <div id="testimonial-track" class="flex gap-8 overflow-x-auto pb-6 pt-2 no-scrollbar snap-x snap-mandatory scroll-smooth">
+            <!-- Testimonials Track Container -->
+            <div class="relative">
+                <div id="testimonial-track" class="flex overflow-x-auto space-x-6 no-scrollbar pb-6 snap-x snap-mandatory">
                     
                     <!-- Testimonial 1 -->
-                    <div class="min-w-[320px] sm:min-w-[380px] max-w-[420px] flex-1 glass-card p-8 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between snap-start">
+                    <div class="min-w-[320px] sm:min-w-[380px] glass-card p-8 rounded-3xl border border-white/10 snap-start flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex text-akademiaGold space-x-1 text-sm">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed italic">
-                                "Enrolling my son in Grade 6 at The Akademia Institute was the best decision. The teachers give individual attention, and he loves his weekly karate classes!"
+                            <p class="text-gray-300 text-sm italic leading-relaxed">
+                                "The Akademia Institute has completely transformed my child's academic confidence. The teachers are dedicated, patient, and focus intensely on clear concepts."
                             </p>
                         </div>
-                        <div class="flex items-center space-x-4 border-t border-white/10 pt-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-600/30 flex items-center justify-center font-bold text-blue-300 shrink-0">
-                                UM
-                            </div>
+                        <div class="flex items-center space-x-3 pt-4 border-t border-white/5">
+                            <div class="w-10 h-10 rounded-full bg-akademiaGold/20 text-akademiaGold flex items-center justify-center font-bold text-sm">A</div>
                             <div>
-                                <h4 class="font-bold text-sm">Usman Malik</h4>
-                                <p class="text-xs text-gray-400">Parent of Grade 6 Student (Samnabad)</p>
+                                <h4 class="font-bold text-sm text-white">Ahmed Raza</h4>
+                                <span class="text-xs text-gray-400">Parent, Samnabad Lahore</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Testimonial 2 -->
-                    <div class="min-w-[320px] sm:min-w-[380px] max-w-[420px] flex-1 glass-card p-8 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between snap-start">
+                    <div class="min-w-[320px] sm:min-w-[380px] glass-card p-8 rounded-3xl border border-white/10 snap-start flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex text-akademiaGold space-x-1 text-sm">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed italic">
-                                "The computer short courses and spoken English classes have given my daughter immense confidence. The campus environment is extremely safe and disciplined."
+                            <p class="text-gray-300 text-sm italic leading-relaxed">
+                                "Their welfare initiative offering free education for disabled students shows their true commitment to humanity. Exceptional institute with high moral standards."
                             </p>
                         </div>
-                        <div class="flex items-center space-x-4 border-t border-white/10 pt-4">
-                            <div class="w-12 h-12 rounded-full bg-akademiaGold/30 flex items-center justify-center font-bold text-akademiaGold shrink-0">
-                                AZ
-                            </div>
+                        <div class="flex items-center space-x-3 pt-4 border-t border-white/5">
+                            <div class="w-10 h-10 rounded-full bg-akademiaGold/20 text-akademiaGold flex items-center justify-center font-bold text-sm">F</div>
                             <div>
-                                <h4 class="font-bold text-sm">Ayesha Zafar</h4>
-                                <p class="text-xs text-gray-400">Parent of High School Student</p>
+                                <h4 class="font-bold text-sm text-white">Fatima Tariq</h4>
+                                <span class="text-xs text-gray-400">Local Community Member</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Testimonial 3 -->
-                    <div class="min-w-[320px] sm:min-w-[380px] max-w-[420px] flex-1 glass-card p-8 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between snap-start">
+                    <div class="min-w-[320px] sm:min-w-[380px] glass-card p-8 rounded-3xl border border-white/10 snap-start flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex text-akademiaGold space-x-1 text-sm">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
-                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed italic">
-                                "Finding an institution that offers quality schooling with sibling concessions and genuine care is rare. The Akademia Institute administration is very supportive."
+                            <p class="text-gray-300 text-sm italic leading-relaxed">
+                                "The combination of solid computer literacy classes and karate training makes this institute stand out completely from normal schools in Lahore."
                             </p>
                         </div>
-                        <div class="flex items-center space-x-4 border-t border-white/10 pt-4">
-                            <div class="w-12 h-12 rounded-full bg-green-600/30 flex items-center justify-center font-bold text-green-300 shrink-0">
-                                TA
-                            </div>
+                        <div class="flex items-center space-x-3 pt-4 border-t border-white/5">
+                            <div class="w-10 h-10 rounded-full bg-akademiaGold/20 text-akademiaGold flex items-center justify-center font-bold text-sm">U</div>
                             <div>
-                                <h4 class="font-bold text-sm">Tariq Ahmed</h4>
-                                <p class="text-xs text-gray-400">Parent of Primary & Middle Students</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 4 -->
-                    <div class="min-w-[320px] sm:min-w-[380px] max-w-[420px] flex-1 glass-card p-8 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between snap-start">
-                        <div class="space-y-4">
-                            <div class="flex text-akademiaGold space-x-1 text-sm">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed italic">
-                                "We are deeply moved by their initiative to provide 100% free education for disabled students. It shows true social responsibility and a caring heart."
-                            </p>
-                        </div>
-                        <div class="flex items-center space-x-4 border-t border-white/10 pt-4">
-                            <div class="w-12 h-12 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-purple-300 shrink-0">
-                                FK
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm">Fahad Khan</h4>
-                                <p class="text-xs text-gray-400">Local Resident & Supporter</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 5 -->
-                    <div class="min-w-[320px] sm:min-w-[380px] max-w-[420px] flex-1 glass-card p-8 rounded-3xl border border-white/10 space-y-6 flex flex-col justify-between snap-start">
-                        <div class="space-y-4">
-                            <div class="flex text-akademiaGold space-x-1 text-sm">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed italic">
-                                "The transition from early years prep to primary school has been seamless for my little one. The teachers are polite, professional, and very encouraging."
-                            </p>
-                        </div>
-                        <div class="flex items-center space-x-4 border-t border-white/10 pt-4">
-                            <div class="w-12 h-12 rounded-full bg-amber-600/30 flex items-center justify-center font-bold text-amber-300 shrink-0">
-                                SN
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-sm">Sadia Naveed</h4>
-                                <p class="text-xs text-gray-400">Parent of Prep Student</p>
+                                <h4 class="font-bold text-sm text-white">Usman Malik</h4>
+                                <span class="text-xs text-gray-400">Student Parent</span>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Scroll Controls / Indicators -->
+                <!-- Carousel scroll navigation hints -->
                 <div class="flex items-center justify-center space-x-4 mt-8">
-                    <button id="slide-left" class="w-12 h-12 rounded-full glass-card border border-white/10 text-white flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <button id="slide-left" class="w-12 h-12 rounded-full glass-card border border-white/10 text-white flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                     <span class="text-xs text-gray-400 font-semibold tracking-wider uppercase">Swipe or Use Arrows</span>
-                    <button id="slide-right" class="w-12 h-12 rounded-full glass-card border border-white/10 text-white flex items-center justify-center hover:bg-white/10 transition-colors">
+                    <button id="slide-right" class="w-12 h-12 rounded-full glass-card border border-white/10 text-white flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -526,249 +400,152 @@
         </div>
     </section>
 
-    <!-- Special Concessions Section -->
+    <!-- Concessions & Welfare Section -->
     <section id="concessions" class="py-24 px-6 lg:px-12 relative z-10 bg-black/20 backdrop-blur-md border-y border-white/5">
-        <div class="max-w-[90rem] mx-auto space-y-16">
-            <div class="text-center space-y-4 max-w-3xl mx-auto">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Affordable Excellence</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Special Concessions & Free Education</h2>
-                <p class="text-gray-400 text-base">We believe quality education should be accessible to all families and deserving students.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Highlighted 100% Free for Disabled Students First -->
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-akademiaGold/40 text-center space-y-5 bg-gradient-to-b from-akademiaGold/10 to-transparent">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-green-600/20 text-green-400 flex items-center justify-center text-3xl">
-                        <i class="fa-solid fa-hands-holding-child"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-akademiaGold">100% Free for Disabled Students</h3>
-                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        Fully free education, special care, and accommodation for disabled students as part of our core social welfare commitment.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 text-center space-y-5">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-blue-600/20 text-blue-400 flex items-center justify-center text-3xl">
-                        <i class="fa-solid fa-percent"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold">Student Discounts</h3>
-                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-                        Merit-based scholarships and special fee reductions for high-achieving and hardworking students across all grades.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 text-center space-y-5">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-akademiaGold/20 text-akademiaGold flex items-center justify-center text-3xl">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold">Sibling Discounts</h3>
-                    <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-                        Substantial fee concessions for families enrolling multiple siblings, easing financial responsibilities for parents.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section id="why-us" class="py-24 px-6 lg:px-12 relative z-10">
-        <div class="max-w-[90rem] mx-auto space-y-16">
-            <div class="text-center space-y-4 max-w-3xl mx-auto">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">The Akademia Advantage</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Why Choose The Akademia Institute?</h2>
-                <p class="text-gray-400 text-base">Discover what makes our institution stand out in Samnabad, Lahore.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass-card p-8 rounded-2xl border border-white/10 space-y-4">
-                    <div class="text-akademiaGold text-2xl"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <h4 class="font-bold text-lg">Qualified Faculty</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Experienced and dedicated teachers focused on individual student progress.</p>
-                </div>
-                <div class="glass-card p-8 rounded-2xl border border-white/10 space-y-4">
-                    <div class="text-akademiaGold text-2xl"><i class="fa-solid fa-shield-heart"></i></div>
-                    <h4 class="font-bold text-lg">Secure Environment</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Safe, monitored campus providing peace of mind for parents.</p>
-                </div>
-                <div class="glass-card p-8 rounded-2xl border border-white/10 space-y-4">
-                    <div class="text-akademiaGold text-2xl"><i class="fa-solid fa-comments"></i></div>
-                    <h4 class="font-bold text-lg">Parent Engagement</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Regular progress updates, parent-teacher meetings, and transparent communication.</p>
-                </div>
-                <div class="glass-card p-8 rounded-2xl border border-white/10 space-y-4">
-                    <div class="text-akademiaGold text-2xl"><i class="fa-solid fa-trophy"></i></div>
-                    <h4 class="font-bold text-lg">Holistic Growth</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Balancing academics with sports, karate, and moral character building.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admission Form Section -->
-    <section id="admission" class="py-24 px-6 lg:px-12 relative z-10 bg-black/20 backdrop-blur-md border-y border-white/5">
-        <div class="max-w-4xl mx-auto glass-card p-8 sm:p-14 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-20 -top-20 w-80 h-80 bg-akademiaGold/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="text-center space-y-4 mb-10">
-                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Join Our Family</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Online Admission Form</h2>
-                <p class="text-gray-400 text-sm sm:text-base">Fill out the quick inquiry form below to instantly dispatch your details via WhatsApp directly to 0310-4241477.</p>
-            </div>
-
-            <form id="admission-form" class="space-y-6">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-xs sm:text-sm font-semibold text-gray-300">Student Full Name *</label>
-                        <input type="text" id="student-name" required placeholder="Enter student's name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white focus:outline-none focus:border-akademiaGold">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs sm:text-sm font-semibold text-gray-300">Parent / Guardian Name *</label>
-                        <input type="text" id="parent-name" required placeholder="Enter parent's name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white focus:outline-none focus:border-akademiaGold">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-xs sm:text-sm font-semibold text-gray-300">Phone / WhatsApp Number *</label>
-                        <input type="tel" id="phone-number" required placeholder="03xx-xxxxxxx" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white focus:outline-none focus:border-akademiaGold">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs sm:text-sm font-semibold text-gray-300">Select Grade / Program *</label>
-                        <select id="grade-level" required class="w-full bg-[#0b0f19] border border-white/10 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white focus:outline-none focus:border-akademiaGold">
-                            <option value="" disabled selected>Choose class level</option>
-                            <option value="Nursery / Prep">Nursery / Prep</option>
-                            <option value="Primary (Grade 1 to 5)">Primary (Grade 1 to 5)</option>
-                            <option value="Middle (Grade 6 to 8)">Middle (Grade 6 to 8)</option>
-                            <option value="High School (Grade 9 to 12)">High School (Grade 9 to 12)</option>
-                            <option value="Professional Short Courses">Professional Short Courses</option>
-                            <option value="Karate Training">Karate Training</option>
-                            <option value="Disabled Student Free Program">Disabled Student Free Program (100% Free)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="space-y-2">
-                    <label class="text-xs sm:text-sm font-semibold text-gray-300">Additional Message or Inquiry (Optional)</label>
-                    <textarea id="additional-msg" rows="4" placeholder="Mention any specific queries or concession requirements..." class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm sm:text-base text-white focus:outline-none focus:border-akademiaGold"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-green-600 via-emerald-600 to-akademiaGold font-bold text-base sm:text-lg text-white shadow-2xl shadow-green-900/50 hover:scale-[1.01] transition-transform flex items-center justify-center space-x-3">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    <span>Submit & Send via WhatsApp</span>
-                </button>
-            </form>
-
-            <div id="form-success" class="hidden text-center py-12 space-y-6">
-                <div class="w-20 h-20 mx-auto bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-4xl">
-                    <i class="fa-solid fa-check"></i>
-                </div>
-                <h3 class="text-2xl sm:text-3xl font-bold">Opening WhatsApp...</h3>
-                <p class="text-gray-300 text-sm sm:text-base max-w-md mx-auto">Your admission details have been compiled. Redirecting to WhatsApp chat with 0310-4241477 now!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Footer Section -->
-    <footer id="contact" class="pt-20 pb-12 px-6 lg:px-12 relative z-10 bg-black/40 border-t border-white/10">
-        <div class="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-            <div class="space-y-4 md:col-span-1">
-                <div class="flex items-center space-x-3">
-                    <img src="The Akademia Institute/Logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover">
-                    <span class="font-extrabold text-lg">THE AKADEMIA</span>
-                </div>
-                <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                    Where Future Is You. Comprehensive academic institution from Nursery to Grade 12, offering modern short courses and professional karate training in Samnabad, Lahore.
+        <div class="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Inclusive Community Welfare</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">Education Accessible For Every Child</h2>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+                    We believe that financial barriers or physical challenges should never stop a passionate mind from learning. At <strong class="text-white">The Akademia Institute</strong>, we offer dedicated welfare initiatives to support families in Lahore.
                 </p>
-                <div class="flex space-x-3 text-akademiaGold text-lg pt-1">
-                    <a href="https://wa.me/923104241477" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="tel:03104241477" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-phone"></i></a>
+                <div class="space-y-4 pt-2">
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-green-600/20 text-green-400 flex items-center justify-center text-xl shrink-0 mt-1">
+                            <i class="fa-solid fa-hands-holding-child"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-white">100% Free Education for Disabled Students</h4>
+                            <p class="text-xs sm:text-sm text-gray-400 mt-1">Full tuition waiver and personalized supportive care to empower students with special needs.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-akademiaGold/20 text-akademiaGold flex items-center justify-center text-xl shrink-0 mt-1">
+                            <i class="fa-solid fa-percent"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-white">Special Sibling Concessions</h4>
+                            <p class="text-xs sm:text-sm text-gray-400 mt-1">Relief packages and fee concessions designed to ease financial management for families with multiple children enrolled.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="space-y-4">
-                <h4 class="font-bold text-xs text-akademiaGold uppercase tracking-wider">Quick Links</h4>
-                <ul class="space-y-2.5 text-xs sm:text-sm text-gray-300">
-                    <li><a href="#about" class="hover:text-akademiaGold transition-colors">About Us</a></li>
-                    <li><a href="#academics" class="hover:text-akademiaGold transition-colors">Programs</a></li>
-                    <li><a href="#courses" class="hover:text-akademiaGold transition-colors">Short Courses</a></li>
-                    <li><a href="#karate" class="hover:text-akademiaGold transition-colors">Karate Training</a></li>
-                    <li><a href="#testimonials" class="hover:text-akademiaGold transition-colors">Testimonials</a></li>
-                    <li><a href="#concessions" class="hover:text-akademiaGold transition-colors">Concessions</a></li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="font-bold text-xs text-akademiaGold uppercase tracking-wider">Programs</h4>
-                <ul class="space-y-2.5 text-xs sm:text-sm text-gray-300">
-                    <li><span class="text-gray-400">Nursery to Prep</span></li>
-                    <li><span class="text-gray-400">Primary (Grade 1-5)</span></li>
-                    <li><span class="text-gray-400">Middle School (Grade 6-8)</span></li>
-                    <li><span class="text-gray-400">High School (Grade 9-12)</span></li>
-                    <li><span class="text-gray-400">100% Free Disabled Support</span></li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="font-bold text-xs text-akademiaGold uppercase tracking-wider">Contact Info</h4>
-                <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+            <div id="why-us" class="glass-card p-8 sm:p-10 rounded-3xl border border-white/10 space-y-6">
+                <h3 class="text-2xl font-bold">Why The Akademia Institute Stands Out</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
                     <li class="flex items-start space-x-3">
-                        <i class="fa-solid fa-location-dot text-akademiaGold mt-1"></i>
-                        <span>Samnabad, Lahore, Pakistan</span>
+                        <i class="fa-solid fa-check text-akademiaGold mt-1"></i>
+                        <span>Experienced, qualified, and highly dedicated teaching faculty.</span>
                     </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-solid fa-phone text-akademiaGold"></i>
-                        <a href="tel:03104241477" class="hover:underline">0310-4241477</a>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-akademiaGold mt-1"></i>
+                        <span>Strictly disciplined, secure, and morally upright environment.</span>
                     </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-brands fa-whatsapp text-green-400 text-base"></i>
-                        <a href="https://wa.me/923104241477" target="_blank" class="hover:underline">WhatsApp Inquiry</a>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-akademiaGold mt-1"></i>
+                        <span>Balanced focus on academics, computer literacy, and martial arts.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-akademiaGold mt-1"></i>
+                        <span>Regular parent-teacher feedback sessions for student progress tracking.</span>
                     </li>
                 </ul>
             </div>
         </div>
+    </section>
 
-        <div class="max-w-[90rem] mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-gray-500">
-            <p>&copy; 2026 The Akademia Institute. All rights reserved.</p>
-            <p class="mt-2 sm:mt-0 text-akademiaGold font-semibold">Where Future Is You</p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Widget & Pop-up Chat Window -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        <!-- Chat Popup Box -->
-        <div id="whatsapp-popup" class="hidden mb-4 w-72 sm:w-80 glass-card border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-            <div class="bg-gradient-to-r from-green-700 to-green-600 p-4 text-white flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center font-bold text-xs">
-                        AI
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-xs sm:text-sm">The Akademia Institute</h4>
-                        <span class="text-[10px] text-green-200 flex items-center"><span class="w-2 h-2 rounded-full bg-green-400 inline-block mr-1.5 animate-pulse"></span> Online | Reply in minutes</span>
-                    </div>
-                </div>
-                <button id="close-whatsapp" class="text-white/80 hover:text-white p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+    <!-- Admission Section & CTA -->
+    <section id="admission" class="py-24 px-6 lg:px-12 relative z-10">
+        <div class="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-3xl border border-akademiaGold/30 text-center space-y-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-akademiaGold/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="space-y-4">
+                <span class="text-akademiaGold font-bold text-sm tracking-widest uppercase">Admissions Are Open</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Ready to Secure Your Child's Future?</h2>
+                <p class="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
+                    Visit our campus in Samnabad, Lahore, or get in touch with us instantly via phone or WhatsApp to book an admission assessment.
+                </p>
             </div>
-            <div class="p-4 bg-black/60 space-y-3 text-xs">
-                <div class="bg-white/10 p-3 rounded-xl rounded-tl-none max-w-[90%] text-gray-200 leading-relaxed">
-                    👋 Hello! Welcome to <strong>The Akademia Institute</strong> (Samnabad, Lahore). How can we help you with admissions, short courses, or our 100% free disabled support program today?
-                </div>
-            </div>
-            <div class="p-3 bg-black/80 border-t border-white/10">
-                <a href="https://wa.me/923104241477?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-2 transition-colors">
-                    <i class="fa-brands fa-whatsapp text-sm"></i>
-                    <span>Start WhatsApp Chat</span>
+            <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+                <a href="https://wa.me/923104241477?text=Hello,%20I%20want%20to%20inquire%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-2xl transition-all shadow-xl shadow-green-600/30 flex items-center space-x-3 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <a href="tel:03104241477" class="glass-card hover:bg-white/10 text-white font-bold px-8 py-4 rounded-2xl border border-white/10 transition-all flex items-center space-x-3 text-sm">
+                    <i class="fa-solid fa-phone text-akademiaGold"></i>
+                    <span>Call: 0310-4241477</span>
                 </a>
             </div>
         </div>
+    </section>
 
-        <!-- Floating Button -->
-        <button id="whatsapp-toggle" class="w-14 h-14 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 relative">
-            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-black animate-ping"></span>
-            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-black"></span>
-            <i class="fa-brands fa-whatsapp"></i>
-        </button>
-    </div>
+    <!-- Footer / Contact Information -->
+    <footer id="contact" class="border-t border-white/10 py-16 px-6 lg:px-12 bg-black/40">
+        <div class="max-w-[90rem] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <img src="The Akademia Institute/Logo.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover border border-akademiaGold/30">
+                    <span class="font-extrabold text-lg tracking-wide">The Akademia Institute</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Shaping Minds, Where Future Is You. Dedicated to academic excellence, professional development, and community welfare in Samnabad, Lahore.
+                </p>
+            </div>
+            
+            <div class="space-y-3 text-sm text-gray-300">
+                <h4 class="font-bold text-white uppercase tracking-wider text-xs">Quick Links</h4>
+                <p><a href="#about" class="hover:text-akademiaGold transition-colors">About Us</a></p>
+                <p><a href="#academics" class="hover:text-akademiaGold transition-colors">Programs & Academics</a></p>
+                <p><a href="#courses" class="hover:text-akademiaGold transition-colors">Short Courses & Karate</a></p>
+                <p><a href="#concessions" class="hover:text-akademiaGold transition-colors">Welfare & Concessions</a></p>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="space-y-3 text-sm text-gray-300">
+                <h4 class="font-bold text-white uppercase tracking-wider text-xs">Contact Campus</h4>
+                <p class="flex items-center space-x-3">
+                    <i class="fa-solid fa-location-dot text-akademiaGold"></i>
+                    <span>Samnabad, Lahore, Pakistan</span>
+                </p>
+                <p class="flex items-center space-x-3">
+                    <i class="fa-solid fa-envelope text-akademiaGold"></i>
+                    <span>info@theakademiainstitute.org</span>
+                </p>
+                <p class="flex items-center space-x-3">
+                    <i class="fa-solid fa-phone text-akademiaGold"></i>
+                    <span>+92 310 4241477</span>
+                </p>
+            </div>
+        </div>
+        <div class="max-w-[90rem] mx-auto border-t border-white/10 mt-12 pt-8 text-center text-xs text-gray-500">
+            &copy; 2026 The Akademia Institute. All rights reserved. Built with professional precision.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Testimonial Carousel -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Testimonial Carousel Scroll
+        const track = document.getElementById('testimonial-track');
+        const btnLeft = document.getElementById('slide-left');
+        const btnRight = document.getElementById('slide-right');
+
+        if (track && btnLeft && btnRight) {
+            btnLeft.addEventListener('click', () => {
+                track.scrollBy({ left: -400, behavior: 'smooth' });
+            });
+            btnRight.addEventListener('click', () => {
+                track.scrollBy({ left: 400, behavior: 'smooth' });
+            });
+        }
+    </script>
 </body>
 </html>
