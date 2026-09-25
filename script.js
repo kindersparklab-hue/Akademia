@@ -147,3 +147,18 @@ if (canvas) {
         console.log("Three.js initialization skipped:", err);
     }
 }
+
+
+// Testimonial Scroll Controls & Auto-Scroll
+const track = document.getElementById('testimonial-track');
+const btnLeft = document.getElementById('slide-left');
+const btnRight = document.getElementById('slide-right');
+
+if (track && btnLeft && btnRight) {
+    btnLeft.addEventListener('click', () => {
+        track.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+    btnRight.addEventListener('click', () => {
+        track.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+}
