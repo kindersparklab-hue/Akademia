@@ -46,16 +46,19 @@
 
     <!-- Navigation Header -->
     <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/10 backdrop-blur-md transition-all duration-300" id="navbar">
-        <div class="max-w-[90rem] mx-auto px-6 sm:px-8 lg:px-12 h-24 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-3.5 group">
-                <img src="The Akademia Institute/Logo.jpg" alt="The Akademia Institute Logo" class="w-12 h-12 rounded-full object-cover shadow-lg border border-akademiaGold/30">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-12 h-24 flex items-center justify-between gap-4">
+            
+            <!-- Logo & Title (Fixed Shrink Issue) -->
+            <a href="#" class="flex items-center space-x-3 shrink-0 group">
+                <img src="The Akademia Institute/Logo.jpg" alt="The Akademia Institute Logo" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover shadow-lg border border-akademiaGold/30">
                 <div>
-                    <span class="text-lg sm:text-2xl font-extrabold tracking-wide bg-gradient-to-r from-white via-blue-200 to-akademiaGold bg-clip-text text-transparent">THE AKADEMIA</span>
-                    <span class="block text-[10px] sm:text-xs font-semibold text-akademiaGold tracking-widest uppercase">INSTITUTE</span>
+                    <span class="text-base sm:text-xl font-extrabold tracking-wide bg-gradient-to-r from-white via-blue-200 to-akademiaGold bg-clip-text text-transparent">THE AKADEMIA</span>
+                    <span class="block text-[9px] sm:text-[10px] font-semibold text-akademiaGold tracking-widest uppercase">INSTITUTE</span>
                 </div>
             </a>
             
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden xl:flex items-center space-x-6 text-sm font-medium">
                 <a href="#about" class="text-gray-300 hover:text-akademiaGold transition-colors">About</a>
                 <a href="#academics" class="text-gray-300 hover:text-akademiaGold transition-colors">Programs</a>
                 <a href="#courses" class="text-gray-300 hover:text-akademiaGold transition-colors">Short Courses</a>
@@ -66,44 +69,56 @@
                 <a href="#contact" class="text-gray-300 hover:text-akademiaGold transition-colors">Contact</a>
             </nav>
 
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="mailto:info@theakademiainstitute.com" class="flex items-center space-x-2 text-xs sm:text-sm font-bold bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-full hover:bg-white/10 transition-colors">
+            <!-- Tablet Navigation Links (Condensed) -->
+            <nav class="hidden lg:flex xl:hidden items-center space-x-4 text-xs font-medium">
+                <a href="#about" class="text-gray-300 hover:text-akademiaGold transition-colors">About</a>
+                <a href="#academics" class="text-gray-300 hover:text-akademiaGold transition-colors">Programs</a>
+                <a href="#courses" class="text-gray-300 hover:text-akademiaGold transition-colors">Courses</a>
+                <a href="#karate" class="text-gray-300 hover:text-akademiaGold transition-colors">Karate</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-akademiaGold transition-colors">Reviews</a>
+                <a href="#contact" class="text-gray-300 hover:text-akademiaGold transition-colors">Contact</a>
+            </nav>
+
+            <!-- Right-Side Action Badges -->
+            <div class="hidden md:flex items-center space-x-2 lg:space-x-3 shrink-0">
+                <a href="mailto:info@theakademiainstitute.com" class="flex items-center space-x-1.5 text-xs font-bold bg-white/5 border border-white/10 px-3 py-2 rounded-full hover:bg-white/10 transition-colors" title="Email Us">
                     <i class="fa-solid fa-envelope text-akademiaGold"></i>
-                    <span>info@theakademiainstitute.com</span>
+                    <span class="hidden 2xl:inline">info@theakademiainstitute.com</span>
                 </a>
-                <a href="tel:03104241477" class="flex items-center space-x-2 text-xs sm:text-sm font-bold bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-full hover:bg-white/10 transition-colors">
+                <a href="tel:03104241477" class="flex items-center space-x-1.5 text-xs font-bold bg-white/5 border border-white/10 px-3 py-2 rounded-full hover:bg-white/10 transition-colors">
                     <i class="fa-solid fa-phone text-akademiaGold"></i>
                     <span>0310-4241477</span>
                 </a>
-                <a href="#admission" class="bg-gradient-to-r from-blue-600 to-akademiaBlue text-white px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-xl shadow-blue-600/30 hover:scale-105 transition-all">
+                <a href="#admission" class="bg-gradient-to-r from-blue-600 to-akademiaBlue text-white px-4 py-2 rounded-xl font-bold text-xs shadow-xl shadow-blue-600/30 hover:scale-105 transition-all">
                     Apply Now
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="menu-btn" class="lg:hidden text-2xl text-gray-300 focus:outline-none p-2">
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="lg:hidden text-2xl text-gray-300 focus:outline-none p-2" aria-label="Toggle Navigation Menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation Menu -->
+        <!-- Mobile Navigation Dropdown Menu -->
         <div id="mobile-menu" class="hidden lg:hidden glass-nav border-b border-white/10 px-6 py-5 space-y-3">
-            <a href="#about" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">About</a>
-            <a href="#academics" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Programs</a>
-            <a href="#courses" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Short Courses</a>
-            <a href="#karate" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Karate</a>
-            <a href="#testimonials" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Testimonials</a>
-            <a href="#concessions" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Concessions</a>
-            <a href="#why-us" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Why Us</a>
-            <a href="#contact" class="block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Contact</a>
+            <a href="#about" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">About Us</a>
+            <a href="#academics" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Programs (Nursery - Grade 12)</a>
+            <a href="#courses" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Short Courses</a>
+            <a href="#karate" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Karate Training</a>
+            <a href="#testimonials" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Testimonials</a>
+            <a href="#concessions" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Concessions & Free Support</a>
+            <a href="#why-us" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Why Us</a>
+            <a href="#contact" class="mobile-link block text-gray-300 hover:text-akademiaGold py-1.5 text-sm">Contact Us</a>
+            
             <div class="pt-3 flex flex-col space-y-2.5 border-t border-white/10">
-                <a href="mailto:info@theakademiainstitute.com" class="text-center bg-white/10 py-3 rounded-lg text-xs font-bold text-akademiaGold truncate px-2">
+                <a href="mailto:info@theakademiainstitute.com" class="text-center bg-white/10 py-2.5 rounded-lg text-xs font-bold text-akademiaGold truncate px-2">
                     <i class="fa-solid fa-envelope mr-2"></i> info@theakademiainstitute.com
                 </a>
-                <a href="tel:03104241477" class="text-center bg-white/10 py-3 rounded-lg text-sm font-bold text-akademiaGold">
+                <a href="tel:03104241477" class="text-center bg-white/10 py-2.5 rounded-lg text-xs font-bold text-akademiaGold">
                     <i class="fa-solid fa-phone mr-2"></i> 0310-4241477
                 </a>
-                <a href="#admission" class="text-center bg-blue-600 py-3 rounded-lg text-sm font-bold text-white">
+                <a href="#admission" class="mobile-link text-center bg-blue-600 py-2.5 rounded-lg text-xs font-bold text-white">
                     Apply Now
                 </a>
             </div>
@@ -114,7 +129,6 @@
     <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 lg:px-12 z-10 overflow-hidden">
         <div class="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
             <div class="space-y-6 text-center lg:text-left lg:col-span-7">
-                <!-- Highlight Badges including Disabled Student focus -->
                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
                     <div class="inline-flex items-center space-x-2 bg-akademiaGold/10 border border-akademiaGold/30 px-4 py-1.5 rounded-full text-akademiaGold text-xs font-bold tracking-wider uppercase animate-pulse">
                         <i class="fa-solid fa-graduation-cap"></i>
@@ -137,14 +151,14 @@
                     <a href="#admission" class="w-full sm:w-auto text-center bg-gradient-to-r from-akademiaBlue to-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-2xl shadow-blue-900/50 hover:scale-105 transition-all text-sm">
                         Enroll Your Child Today
                     </a>
-                    <a href="https://wa.me/923104241477?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="w-full sm:w-auto text-center bg-green-600/20 border border-green-500/30 text-green-400 font-bold px-7 py-4 rounded-xl hover:bg-green-600/30 transition-all flex items-center justify-center space-x-3 text-sm">
+                    <a href="https://wa.me/923104241477?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center bg-green-600/20 border border-green-500/30 text-green-400 font-bold px-7 py-4 rounded-xl hover:bg-green-600/30 transition-all flex items-center justify-center space-x-3 text-sm">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span>WhatsApp Chat</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Dynamic Feature Graphic Card -->
+            <!-- Feature Card -->
             <div class="relative flex justify-center lg:col-span-5">
                 <div class="absolute -inset-2 bg-gradient-to-r from-akademiaBlue to-akademiaGold rounded-3xl blur-2xl opacity-20"></div>
                 <div class="relative w-full max-w-md glass-card p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl space-y-6">
@@ -477,7 +491,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Highlighted 100% Free for Disabled Students First -->
                 <div class="glass-card p-8 sm:p-10 rounded-3xl border border-akademiaGold/40 text-center space-y-5 bg-gradient-to-b from-akademiaGold/10 to-transparent">
                     <div class="w-16 h-16 mx-auto rounded-full bg-green-600/20 text-green-400 flex items-center justify-center text-3xl">
                         <i class="fa-solid fa-hands-holding-child"></i>
@@ -620,9 +633,9 @@
                     Where Future Is You. Comprehensive academic institution from Nursery to Grade 12, offering modern short courses and professional karate training in Samnabad, Lahore.
                 </p>
                 <div class="flex space-x-3 text-akademiaGold text-lg pt-1">
-                    <a href="https://wa.me/923104241477" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="mailto:info@theakademiainstitute.com" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="tel:03104241477" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://wa.me/923104241477" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:info@theakademiainstitute.com" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:03104241477" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
                 </div>
             </div>
 
@@ -666,7 +679,7 @@
                     </li>
                     <li class="flex items-center space-x-3">
                         <i class="fa-brands fa-whatsapp text-green-400 text-base"></i>
-                        <a href="https://wa.me/923104241477" target="_blank" class="hover:underline">WhatsApp Inquiry</a>
+                        <a href="https://wa.me/923104241477" target="_blank" rel="noopener noreferrer" class="hover:underline">WhatsApp Inquiry</a>
                     </li>
                 </ul>
             </div>
@@ -680,7 +693,6 @@
 
     <!-- Floating WhatsApp Widget & Pop-up Chat Window -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        <!-- Chat Popup Box -->
         <div id="whatsapp-popup" class="hidden mb-4 w-72 sm:w-80 glass-card border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
             <div class="bg-gradient-to-r from-green-700 to-green-600 p-4 text-white flex items-center justify-between">
                 <div class="flex items-center space-x-3">
@@ -692,7 +704,7 @@
                         <span class="text-[10px] text-green-200 flex items-center"><span class="w-2 h-2 rounded-full bg-green-400 inline-block mr-1.5 animate-pulse"></span> Online | Reply in minutes</span>
                     </div>
                 </div>
-                <button id="close-whatsapp" class="text-white/80 hover:text-white p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+                <button id="close-whatsapp" class="text-white/80 hover:text-white p-1" aria-label="Close chat"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
             <div class="p-4 bg-black/60 space-y-3 text-xs">
                 <div class="bg-white/10 p-3 rounded-xl rounded-tl-none max-w-[90%] text-gray-200 leading-relaxed">
@@ -700,21 +712,78 @@
                 </div>
             </div>
             <div class="p-3 bg-black/80 border-t border-white/10">
-                <a href="https://wa.me/923104241477?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-2 transition-colors">
+                <a href="https://wa.me/923104241477?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20admissions%20at%20The%20Akademia%20Institute." target="_blank" rel="noopener noreferrer" class="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl font-bold text-xs flex items-center justify-center space-x-2 transition-colors">
                     <i class="fa-brands fa-whatsapp text-sm"></i>
                     <span>Start WhatsApp Chat</span>
                 </a>
             </div>
         </div>
 
-        <!-- Floating Button -->
-        <button id="whatsapp-toggle" class="w-14 h-14 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 relative">
+        <button id="whatsapp-toggle" class="w-14 h-14 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 relative" aria-label="Open WhatsApp chat">
             <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-black animate-ping"></span>
             <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-black"></span>
             <i class="fa-brands fa-whatsapp"></i>
         </button>
     </div>
 
+    <!-- Script to handle mobile menu auto-closing and form handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // WhatsApp Popup Toggle
+            const toggleBtn = document.getElementById('whatsapp-toggle');
+            const popupBox = document.getElementById('whatsapp-popup');
+            const closePopup = document.getElementById('close-whatsapp');
+
+            if (toggleBtn && popupBox) {
+                toggleBtn.addEventListener('click', () => {
+                    popupBox.classList.toggle('hidden');
+                });
+            }
+            if (closePopup && popupBox) {
+                closePopup.addEventListener('click', () => {
+                    popupBox.classList.add('hidden');
+                });
+            }
+
+            // Admission Form WhatsApp Redirection Handler
+            const admissionForm = document.getElementById('admission-form');
+            if (admissionForm) {
+                admissionForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const sName = document.getElementById('student-name').value;
+                    const pName = document.getElementById('parent-name').value;
+                    const phone = document.getElementById('phone-number').value;
+                    const grade = document.getElementById('grade-level').value;
+                    const msg = document.getElementById('additional-msg').value;
+
+                    const text = `*New Admission Inquiry - The Akademia Institute*%0A%0A*Student Name:* ${encodeURIComponent(sName)}%0A*Parent Name:* ${encodeURIComponent(pName)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Program/Grade:* ${encodeURIComponent(grade)}%0A*Message:* ${encodeURIComponent(msg || 'N/A')}`;
+                    
+                    admissionForm.classList.add('hidden');
+                    document.getElementById('form-success').classList.remove('hidden');
+
+                    setTimeout(() => {
+                        window.open(`https://wa.me/923104241477?text=${text}`, '_blank');
+                    }, 1200);
+                });
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
