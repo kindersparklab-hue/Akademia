@@ -1,66 +1,33 @@
-/* Custom Glassmorphism and Styling for The Akademia Institute */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-/* Fluid root sizing so the entire layout scales gracefully to screen size */
-html {
-    font-size: 15px;
-}
-
-@media (min-width: 1280px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1536px) {
-    html {
-        font-size: 17.5px; /* Automatically scales elements up smoothly on large widescreen PCs */
-    }
-}
-
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
+/* Custom Glassmorphism & Utilities */
 .glass-nav {
     background: rgba(11, 15, 25, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .glass-card {
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.glass-card:hover {
-    border-color: rgba(217, 119, 6, 0.4);
-    box-shadow: 0 20px 40px rgba(217, 119, 6, 0.1);
-}
-
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    pointer-events: none;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 @keyframes bounceShort {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 .animate-bounce-short {
-    animation: bounceShort 3s ease-in-out infinite;
+    animation: bounceShort 2.5s ease-in-out infinite;
 }
 
-/* Custom Scrollbar */
+/* Custom scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
 }
